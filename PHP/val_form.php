@@ -66,7 +66,7 @@
 	$obj = new Student($student, $birthday, $group, $specialty, $email);
 	$age = $obj->getAgeFromBirth();
 
-	$mysql = new mysqli('127.0.0.1', 'root', 'root', 'students');
+	$mysql = new mysqli('localhost', 'root', 'root', 'students');
 	$mysql->query("INSERT INTO `registration` (`PIB`, `Groupa`, `Birth`, `Age`, `Specialty`, `Email`) 
 	VALUES ('$student', '$group', '$birthday', '$age', '$specialty', '$email')");
 
